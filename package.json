@@ -9,8 +9,8 @@
   "keywords": [
     "react-native"
   ],
-  "author": "",
-  "license": "",
+  "author": "mldb",
+  "license": "Apache License",
   "dependencies": {
     "react-native-picker": "^4.3.7",
     "moment-jalaali": "^0.8.3"
