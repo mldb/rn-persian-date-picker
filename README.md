@@ -1,14 +1,14 @@
-# react-native-persian-date-picker
+# rn-persian-date-picker
 
 a simple persian date picker for react native
 
 # ScreenShots :
 
-<img src="http://up.upinja.com/8zxn9.png" width="350" height="600"/>
+<img src="https://media.giphy.com/media/U77f6ZefyqUalkye5m/giphy.gif" width="350" height="600"/>
 
 .
 
-<img src="https://cdn.pbrd.co/images/GPY2PdA.png" width="350" height="600"/>
+<img src="https://media.giphy.com/media/Qw2aJdzo4m9O0gGGOg/giphy.gif" width="350" height="600"/>
 
 # Installing:
 
