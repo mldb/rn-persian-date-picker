@@ -1,11 +1,10 @@
 // @flow
 import React, { Component } from "react";
 import { View, Keyboard } from "react-native";
-import Screen from "../Screen";
 import moment from "moment-jalaali";
 import Picker from "react-native-picker";
-import { toFaDigit, convertNumberToEnglish } from "../modules";
-import { primaryFontFamily, smallFont } from "../modules";
+import { toFaDigit, convertNumberToEnglish } from "./modules";
+import { primaryFontFamily, smallFont } from "./modules";
 
 type Props = {
   type: "jalali" | "Gregorian",
@@ -41,7 +40,6 @@ export default class PheebsDatePicker extends Component<Props> {
     pickerConfirmBtnColor: [0, 0, 0, 1],
     pickerTitleColor: [0, 0, 0, 1],
     pickerBg: [255, 255, 255, 255],
-    pickerFontFamily: primaryFontFamily,
     pickerToolBarFontSize: smallFont
   };
   hide() {
