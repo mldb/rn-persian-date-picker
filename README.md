@@ -4,11 +4,11 @@ a simple persian date picker for react native
 
 # ScreenShots :
 
-<img src="https://media.giphy.com/media/U77f6ZefyqUalkye5m/giphy.gif" width="350" height="600"/>
+<img src="https://media.giphy.com/media/U77f6ZefyqUalkye5m/giphy.gif" width="300" height="600"/>
 
 .
 
-<img src="https://media.giphy.com/media/Qw2aJdzo4m9O0gGGOg/giphy.gif" width="350" height="600"/>
+<img src="https://media.giphy.com/media/Qw2aJdzo4m9O0gGGOg/giphy.gif" width="300" height="600"/>
 
 # Installing:
 
