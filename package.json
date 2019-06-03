@@ -10,6 +10,16 @@
   "keywords": [
     "react-native"
   ],
+  "keywords": [
+    "react-native",
+    "date picker",
+    "persian date picker",
+    "jalali date picker"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mldb/rn-persian-date-picker.git"
+  },
   "author": "mldb",
   "license": "Apache License",
   "dependencies": {
