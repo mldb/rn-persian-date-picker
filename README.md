@@ -17,7 +17,9 @@ a simple persian date picker for react native
       npm i rn-persian-date-picker --save
 
 OR
-yarn add rn-persian-date-picker
+      yarn add rn-persian-date-picker
+
+
 
 # Step 2:
 
