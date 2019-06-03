@@ -41,8 +41,7 @@ export default class App extends Component {
         <TouchableOpacity onPress={() => this.picker.showPicker()}>
           <View style={{ height: 80, width: 180, backgroundColor: "red" }}>
             <Text>
-              {selectedDate.format("jYYYY/jMM/jDD")} //for more formats and
-              functions go to moment-jalaali
+              {selectedDate.format("jYYYY/jMM/jDD")} //for more formats and functions go to moment-jalaali
             </Text>
           </View>
         </TouchableOpacity>
