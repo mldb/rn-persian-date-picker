@@ -8,9 +8,6 @@ import { primaryFontFamily, smallFont } from "./modules";
 
 type Props = {
   type: "Jalali" | "Gregorian",
-  year: number,
-  month: number,
-  day: number,
   pickerConfirmBtnText: string,
   pickerTitleText: string,
   pickerCancelBtnColor: [number, number, number, number],
@@ -42,9 +39,12 @@ export default class PheebsDatePicker extends Component<Props> {
     pickerBg: [255, 255, 255, 255],
     pickerToolBarFontSize: smallFont
   };
-  hide() {
+  hidePicker() {
     this.pickerIsOpen = false;
     Picker.hide();
+  }
+  isOpen() {
+    return this.pickerIsOpen;
   }
   showPicker = () => {
     const {

@@ -1,15 +1,12 @@
 {
   "name": "rn-persian-date-picker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a simple date picker for Jalali and Gregorian",
   "main": "index.js",
   "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "react-native"
-  ],
   "keywords": [
     "react-native",
     "date picker",
@@ -23,8 +20,9 @@
   "author": "mldb",
   "license": "Apache License",
   "dependencies": {
+    "moment-jalaali": "^0.8.3",
     "react-native-picker": "^4.3.7",
-    "moment-jalaali": "^0.8.3"
+    "rn-persian-date-picker": "^1.0.1"
   },
   "peerDependencies": {
     "react-native": "^0.41.2",

@@ -1,26 +1,12 @@
 // @flow
-export const toFaDigit = (
-  input: string = "0",
-  separator: Boolean = false,
-  separatorStr: string = ",",
-  sectionCount: number = 3
-): string => {
+export const toFaDigit = (input: string = "0"): string => {
   return input != null
     ? ("" + input).replace(
         /\d+/g,
         (digit: string): string => {
           let ret = "";
           for (let i = 0, len = digit.length; i < len; i += 1) {
-            if (checkRtl())
-              ret += String.fromCharCode(digit.charCodeAt(i) + 1728);
-            else ret += String.fromCharCode(digit.charCodeAt(i));
-            if (
-              separator &&
-              (i + 1) % sectionCount == len % sectionCount &&
-              i < len - 1
-            ) {
-              ret += separatorStr;
-            }
+            ret += String.fromCharCode(digit.charCodeAt(i) + 1728);
           }
           return ret;
         }
