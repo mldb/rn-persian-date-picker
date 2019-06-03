@@ -7,7 +7,7 @@ import { toFaDigit, convertNumberToEnglish } from "./modules";
 import { primaryFontFamily, smallFont } from "./modules";
 
 type Props = {
-  type: "jalali" | "Gregorian",
+  type: "Jalali" | "Gregorian",
   year: number,
   month: number,
   day: number,
