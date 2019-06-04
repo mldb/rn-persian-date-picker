@@ -11,7 +11,8 @@
     "react-native",
     "date picker",
     "persian date picker",
-    "jalali date picker"
+    "jalali date picker",
+    "picker"
   ],
   "repository": {
     "type": "git",
@@ -21,8 +22,7 @@
   "license": "Apache License",
   "dependencies": {
     "moment-jalaali": "^0.8.3",
-    "react-native-picker": "^4.3.7",
-    "rn-persian-date-picker": "^1.0.1"
+    "react-native-picker": "^4.3.7"
   },
   "peerDependencies": {
     "react-native": "^0.41.2",
