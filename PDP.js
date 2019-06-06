@@ -116,22 +116,6 @@ export default class PheebsDatePicker extends Component<Props> {
         : this._createDates();
     return (
       <View />
-      //   <Screen>
-      //     <View
-      //       style={{
-      //         flex: 1,
-      //         justifyContent: "center",
-      //         alignItems: "center",
-      //         backgroundColor: "red"
-      //       }}
-      //     >
-      //       <TouchableOpacity onPress={this.showPicker}>
-      //         <View
-      //           style={{ backgroundColor: "green", height: 64, width: 100 }}
-      //         />
-      //       </TouchableOpacity>
-      //     </View>
-      //   </Screen>
     );
   }
 
