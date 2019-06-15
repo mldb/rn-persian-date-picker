@@ -20,7 +20,7 @@ type Props = {
   pickerCancelBtnText: string,
   yearCount: number,
   onConfirm: () => moment.Moment,
-  onCancel: Function,
+  onPickerCancel: Function,
   onSelect: Function,
   pickerFontFamily: string
 };
@@ -54,6 +54,7 @@ export default class PheebsDatePicker extends Component<Props> {
       onConfirm,
       pickerCancelBtnColor,
       pickerToolBarFontSize,
+      onPickerCancel,
       pickerFontSize,
       pickerToolBarBg,
       pickerConfirmBtnColor,
@@ -82,6 +83,7 @@ export default class PheebsDatePicker extends Component<Props> {
       },
       onPickerCancel: data => {
         this.pickerIsOpen = false;
+        onPickerCancel();
       },
       onPickerSelect: data => {}
     });
