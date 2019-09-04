@@ -158,10 +158,14 @@ export default class PheebsDatePicker extends Component<Props> {
     const {defaultValue} = this.props
     const m = moment(defaultValue, "YYYY/M/D");
 
+    this.oldYear = m.year() + '';
+    this.oldMonth = this.getMonthStringEng(m.month() + 1);
+    this.oldDay = m.date() + '';
+
     return [
-      m.year() + '',
-      this.getMonthStringEng(m.month() + 1),
-      m.date() + '',
+      this.oldYear,
+      this.oldMonth,
+      this.oldDay
     ]
   }
 
@@ -169,10 +173,14 @@ export default class PheebsDatePicker extends Component<Props> {
     const {defaultValue} = this.props
     const m = moment(defaultValue, "jYYYY/jM/jD");
 
+    this.oldYear = toFaDigit(m.jYear()) + '';
+    this.oldMonth = this.getMonthString(m.jMonth() + 1);
+    this.oldDay = toFaDigit(m.jDate());
+
     return [
-      toFaDigit(m.jYear()) + '',
-      this.getMonthString(m.jMonth() + 1),
-      toFaDigit(m.jDate()),
+      this.oldYear,
+      this.oldMonth,
+      this.oldDay
     ]
   }
 
