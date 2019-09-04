@@ -76,6 +76,7 @@ export default class PheebsDatePicker extends Component<Props> {
       pickerConfirmBtnText,
       pickerTextEllipsisLen: 100,
       pickerData: this.data,
+      selectedValue : this.defaultValue(),
       onPickerConfirm: data => {
         this.props.type === "Gregorian"
           ? this.gregorianConfirm(data)
@@ -83,15 +84,17 @@ export default class PheebsDatePicker extends Component<Props> {
       },
       onPickerCancel: data => {
         this.pickerIsOpen = false;
-        onPickerCancel();
+        if (onPickerCancel) {
+          onPickerCancel();
+        }
       },
       onPickerSelect: data => {
         let [year, month, day] = data;
 
-        if(this.oldYear && year!==this.oldYear){
-          month=  this.oldMonth;
+        if (this.oldYear && year !== this.oldYear) {
+          month = this.oldMonth;
           day = this.oldDay;
-        } else if(this.oldMonth && month!==this.oldMonth){
+        } else if (this.oldMonth && month !== this.oldMonth) {
           day = this.oldDay;
         }
 
@@ -99,7 +102,7 @@ export default class PheebsDatePicker extends Component<Props> {
         this.oldMonth = month
         this.oldDay = day
 
-        Picker.select([year, month, day ])
+        Picker.select([year, month, day])
       }
     });
     Keyboard.dismiss();
@@ -134,6 +137,43 @@ export default class PheebsDatePicker extends Component<Props> {
     return (
       <View />
     );
+  }
+
+  defaultValue = () => {
+    const {defaultValue} = this.props
+    if (defaultValue) {
+      const value =  this.props.type === "Gregorian"
+        ? this._gregorianDefaultValue()
+        : this._defaultValue();
+
+      console.log('value',value);
+
+      return value;
+    }
+
+    return undefined;
+  }
+
+  _gregorianDefaultValue = () => {
+    const {defaultValue} = this.props
+    const m = moment(defaultValue, "YYYY/M/D");
+
+    return [
+      m.year() + '',
+      this.getMonthStringEng(m.month() + 1),
+      m.date() + '',
+    ]
+  }
+
+  _defaultValue = () => {
+    const {defaultValue} = this.props
+    const m = moment(defaultValue, "jYYYY/jM/jD");
+
+    return [
+      toFaDigit(m.jYear()) + '',
+      this.getMonthString(m.jMonth() + 1),
+      toFaDigit(m.jDate()),
+    ]
   }
 
   _createDates() {
@@ -267,9 +307,9 @@ export default class PheebsDatePicker extends Component<Props> {
       var MaxDay = 31;
     } else {
       m = moment(this.props.maxDate, "YYYY/M/D");
-      var MaxMonth = m.Month();
+      var MaxMonth = m.month();
       var MaxYear = m.year();
-      var MaxDay = m.Date();
+      var MaxDay = m.date();
     }
     m =
       this.props.minDate == undefined
