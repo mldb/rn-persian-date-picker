@@ -85,7 +85,22 @@ export default class PheebsDatePicker extends Component<Props> {
         this.pickerIsOpen = false;
         onPickerCancel();
       },
-      onPickerSelect: data => {}
+      onPickerSelect: data => {
+        let [year, month, day] = data;
+
+        if(this.oldYear && year!==this.oldYear){
+          month=  this.oldMonth;
+          day = this.oldDay;
+        } else if(this.oldMonth && month!==this.oldMonth){
+          day = this.oldDay;
+        }
+
+        this.oldYear = year
+        this.oldMonth = month
+        this.oldDay = day
+
+        Picker.select([year, month, day ])
+      }
     });
     Keyboard.dismiss();
     Picker.show();
